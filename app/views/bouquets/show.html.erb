@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @bouquet.style %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bouquet.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @bouquet.image_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @bouquet.price %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @bouquet.size %>
+</p>
+
+<%= link_to 'Edit', edit_bouquet_path(@bouquet) %> |
+<%= link_to 'Back', bouquets_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bouquets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Style</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th>Size</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bouquets.each do |bouquet| %>
+      <tr>
+        <td><%= bouquet.style %></td>
+        <td><%= bouquet.description %></td>
+        <td><%= bouquet.image_url %></td>
+        <td><%= bouquet.price %></td>
+        <td><%= bouquet.size %></td>
+        <td><%= link_to 'Show', bouquet %></td>
+        <td><%= link_to 'Edit', edit_bouquet_path(bouquet) %></td>
+        <td><%= link_to 'Destroy', bouquet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bouquet', new_bouquet_path %>
