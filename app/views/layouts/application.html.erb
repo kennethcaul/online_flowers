@@ -10,65 +10,66 @@
 </head>
 <body>
   
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 
-<div id='header'>
-  <img src="pulpitrock.jpg" alt="Mountain View">
-</div>
+	<div id='header'>
+	  <img src="pulpitrock.jpg" alt="Mountain View">
+	</div>
+  <%= render 'layouts/header' %>
+	<div id='menu'>
+	 <div id='navbar'>
+	 
 
-<div id='menu'>
- </div id='navbar'>
- 
-
-<%link_to"Home",root_Home_path%>
-<%link_to"Bouquets",root_Bouquets_path%>
-<%link_to"Postcode",root_Postcodes_path%>
-<%link_to"Delivery",root_Deliveries_path%>
-<%link_to"Payment",root_Payments_path%>
+		<%= link_to "Home", root_path %>
+		<%= link_to "Bouquets", bouquets_path %>
+		<%= link_to "Postcode", postcodes_path %>
+		<%= link_to "Delivery", deliveries_path %>
+		<%= link_to "Payment", payments_path %>
 
 
-  </div>
-  </div>
-  
-  <div id='container'>
-  
-    <div id='content'>
-    
-    
+	  </div>
+	 </div>
+	  
+	  <div id='container'>
+	  
+		<div id='content'>
+		
+		
 
-<%= yield %>
+		<%= yield %>
+		</div>
 
-</div>
+	  </div>
 
-<div id='first-column'>
-   <div class="loginbox">
-   
+	<div id='first-column'>
+	   <div class="loginbox">
+	   
 
-    <% if user_signed_in? %>
-        <h2>Sign in as ...<%current_user.email %>
-          (<%= link_to 'Sign out' , destroy_user_sessions_path,
-                    :method => :delete%>
-        </h2>                  
-  
-      <% else %>
-        <h2> <%= link_to 'Register' , new_user_registration_path %> 
-  
-        </h2>
-  
-        <h2> <%= link_to 'Sign in' , new_user_session_path %>
-  
-        </h2>
-  
-      <% end %>
-      </div>
-    </div>
-</div>
+			<% if user_signed_in? %>
+				<h2>Sign in as ...<%current_user.email %>
+				  (<%= link_to 'Sign out' , destroy_user_sessions_path,
+							:method => :delete%>
+				</h2>                  
+		  
+			  <% else %>
+				<h2> <%= link_to 'Register' , new_user_registration_path %> 
+		  
+				</h2>
+		  
+				<h2> <%= link_to 'Sign in' , new_user_session_path %>
+		  
+				</h2>
+		  
+			  <% end %>
+		  </div>
+	</div>
 
-<div id='footer'>
-  <h6 class="footertext">&copy;Flowers Online :2017</h6>
-  
-  </div>
+
+	<div id='footer'>
+	  <h6 class="footertext">&copy;Flowers Online :2017</h6>
+	  
+	 </div>
 
 
 </body>
