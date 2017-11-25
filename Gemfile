@@ -52,8 +52,7 @@ group :development do
   gem 'spring'
   
   gem 'devise', '~> 4.3'
-  gem 'stripe', git =>'https://github.com/stripe/stripe-ruby'
+  gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 end
-
 
 

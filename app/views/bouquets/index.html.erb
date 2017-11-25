@@ -2,7 +2,10 @@
 
 <h1>Listing Bouquets</h1>
 
-<table>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+  
   <thead>
     <tr>
       <th>Style</th>
@@ -22,14 +25,15 @@
         <td><%= bouquet.image_url %></td>
         <td><%= bouquet.price %></td>
         <td><%= bouquet.size %></td>
-        <td><%= link_to 'Show', bouquet %></td>
-        <td><%= link_to 'Edit', edit_bouquet_path(bouquet) %></td>
-        <td><%= link_to 'Destroy', bouquet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', bouquet, class: 'btn btn-mini' %></td>
+        <td><%= link_to 'Edit', edit_bouquet_path(bouquet), class: 'btn btn-mini btn-sucess'  %></td>
+        <td><%= link_to 'Destroy', bouquet, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
 <br>
 
 <%= link_to 'New Bouquet', new_bouquet_path %>

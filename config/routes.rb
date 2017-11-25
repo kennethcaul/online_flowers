@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'welcom/index'
+
+  get 'welcom/about'
+
+  get 'welcom/contact'
+
+  get 'welcom/faqs'
+
   resources :charges
   resources :postcodes
   resources :payments
